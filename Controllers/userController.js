@@ -40,6 +40,10 @@ exports.getprofile = async (req, res) => {
   const user = await User.findById(req.id);
   res.json({ message: "Hi " + user.name, user });
 };
+exports.getAllProfile = async (req, res) => {
+  const allUser = await User.find();
+  res.json({ allUser });
+};
 exports.logout = async (req, res) => {
   req.logout();
   req.flash("success_msg", "You are Successful");

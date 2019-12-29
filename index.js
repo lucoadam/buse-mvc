@@ -12,6 +12,9 @@ mongoose.connection.on("error", err => {
 require("./Models/User");
 require("./Models/Post");
 require("./Models/Comment");
+require("./Models/Category");
+require("./Models/SubCategory");
+require("./Models/File");
 
 const app = require("./app");
 //start the server
