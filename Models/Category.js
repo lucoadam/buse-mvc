@@ -5,7 +5,7 @@ const categorySchema = new mongoose.Schema(
     name: {
       type: String,
       trim: true,
-      required: "Name is requiered"
+      required: "Name is required"
     }
   },
   {

@@ -3,7 +3,7 @@ const userController = require("../Controllers/userController");
 const postController = require("../Controllers/postController");
 const commentController = require("../Controllers/commentController");
 const categoryController = require("../Controllers/categoryController");
-const subCategoryController = require("../Controllers/subCategoryController");
+const subCategoryController = require("../Controllers/subcategoryController");
 const fileController = require("../Controllers/fileController");
 const auth = require("../Middlewares/auth");
 //user register routed
@@ -24,8 +24,8 @@ router.post("/comment", auth, commentController.addComment);
 router.get("/comment/:post_id", auth, commentController.getComment);
 
 //category controller routes
-router.post("/category", auth, categoryController.addCategory);
-router.get("/category", auth, categoryController.getCategory);
+router.post("/category", categoryController.addCategory);
+router.get("/category", categoryController.getCategory);
 
 //subcategory controller routes
 router.post("/subcategory", auth, subCategoryController.addSubCategory);
